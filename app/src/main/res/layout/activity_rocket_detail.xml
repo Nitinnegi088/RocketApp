@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:text="falcon 1"
+        android:textColor="@color/black"
+        android:textSize="30sp">
+    </TextView>
+
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:id="@+id/images"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/description_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        app:layout_constraintTop_toBottomOf="@+id/hsv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hsv"
+        app:layout_constraintLeft_toRightOf="@+id/description_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/wiki_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wikipedia Link:"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/wiki_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintLeft_toRightOf="@+id/wiki_label"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/active_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active status: "
+        app:layout_constraintTop_toBottomOf="@+id/wiki_link"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/active_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/wiki_link"
+        app:layout_constraintLeft_toRightOf="@+id/active_label"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/cpl_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost Per Launch: "
+        app:layout_constraintTop_toBottomOf="@+id/active_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/cpl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/active_status"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@+id/cpl_label"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/srp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Success Rate Percent: "
+        app:layout_constraintTop_toBottomOf="@+id/cpl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/srp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cpl"
+        app:layout_constraintLeft_toRightOf="@+id/srp_label"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/height_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height: "
+        app:layout_constraintTop_toBottomOf="@+id/srp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/srp"
+        app:layout_constraintLeft_toRightOf="@+id/height_label"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/diameter_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diameter: "
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/diameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintLeft_toRightOf="@+id/diameter_label"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+    </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
