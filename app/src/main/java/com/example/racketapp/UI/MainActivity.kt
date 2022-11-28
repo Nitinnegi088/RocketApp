@@ -20,10 +20,10 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(),RocketAdapter.OnItemClickListener{
 
+    private lateinit var tv_loading: ProgressBar
     private lateinit var recyclerView: RecyclerView
     private lateinit var rocketAdapters: RocketAdapter
     private lateinit var tv_error: TextView
-    private lateinit var tv_loading: ProgressBar
 
     private val viewModel: RocketViewModel by viewModels()
 
