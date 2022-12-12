@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity(),RocketAdapter.OnItemClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        recyclerView = findViewById(R.id.rv_rocket)
         tv_error = findViewById(R.id.text_view_error)
         rocketAdapters = RocketAdapter(this,ArrayList<RocketDataItem>(),this)
         recyclerView.apply {
