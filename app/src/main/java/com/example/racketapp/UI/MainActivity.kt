@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity(),RocketAdapter.OnItemClickListener{
         setContentView(R.layout.activity_main)
         recyclerView = findViewById(R.id.rv_rocket)
         tv_error = findViewById(R.id.text_view_error)
-        tv_loading = findViewById(R.id.progress_bar)
         rocketAdapters = RocketAdapter(this,ArrayList<RocketDataItem>(),this)
         recyclerView.apply {
             setHasFixedSize(true)
